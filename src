@@ -10,20 +10,14 @@ public class Program {
 		Locale.setDefault(Locale.US);	// deixa US como idioma padrão
 		Scanner sc = new Scanner(System.in);
 		
-		int password = 0;
+		int password = sc.nextInt();
 		
-		while (password != 2002) {
-			
-			password = sc.nextInt();
-			
-			if (password == 2002) {
-				System.out.println("Acesso Permitido");
-				
-			} else {
+		while (password != 2002) {			
 			System.out.println("Senha Invalida");
-			
-			}
+			password = sc.nextInt();
 		}
+		
+		System.out.println("Acesso Permitido");
 					
 		sc.close();
 		
