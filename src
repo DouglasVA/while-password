@@ -1,25 +1,22 @@
-package course;
-
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Program {
-	
-	public static void main(String[] args) {
-		
-		Locale.setDefault(Locale.US);	// deixa US como idioma padrão
-		Scanner sc = new Scanner(System.in);
-		
-		int password = sc.nextInt();
-		
-		while (password != 2002) {			
-			System.out.println("Senha Invalida");
-			password = sc.nextInt();
-		}
-		
-		System.out.println("Acesso Permitido");
-					
-		sc.close();
-		
-	}
+public class Main {
+    public static void main(String[] args) {
+
+        int senha;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("SENHA: ");
+        senha = sc.nextInt();
+
+        while (senha != 2002) {
+            System.out.print("Senha inválida!");
+            senha = sc.nextInt();
+        }
+
+        System.out.print("Acesso permitido!");
+
+        sc.close();
+    }
 }
